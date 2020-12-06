@@ -37,7 +37,8 @@ src/
 ## Logics and Problems
 This project only have two pages. All magics happened in landing page
 ### Landing page -Products index.js
--  Before page render, check fliter state and page numbers in Localstorage, if they are exist go that page, if not featch new data wich Categories=0 "all" with 100 products data
+- Add mobile responsive
+- Before page render, check fliter state and page numbers in Localstorage, if they are exist go that page, if not featch new data wich Categories=0 "all" with 100 products data
 
 - Use redux & redux-thunk to control loading state, when loading data,show loading animation.
 

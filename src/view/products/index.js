@@ -33,8 +33,8 @@ const Products = (props) => {
         let pageN = localStorage.getItem('pageNumber')
         if(pageN){
             paginate(pageN)
-        }else{
-        getProductsData()}
+        }
+        getProductsData()
     }, [])
 
     return (
@@ -50,6 +50,7 @@ const Products = (props) => {
                     <div className="table">
                         <Table {...props} data={currentData} />
                         <Pagination
+                            {...props}
                             dataPerPage={dataPerPage}
                             totalData={data.length}
                             paginate={paginate} />
