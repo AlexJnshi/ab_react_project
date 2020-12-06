@@ -24,6 +24,7 @@ const Details = (props) => {
             }
             return names
         }
+        window.scrollTo(0, 0);
     })
 
     const goBack = (history) => {

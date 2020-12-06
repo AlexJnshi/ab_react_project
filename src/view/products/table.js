@@ -15,16 +15,16 @@ const Table = (props) => {
                 </thead>
                 <tbody>
                     {data.map(item => (
-                        <tr key={item.id} onClick={() => {
-                            props.history.push({
-                                pathname: '/details',
-                                data: item
-                            })
-                        }}>
-                            <td>{item.id}</td>
-                            <td>{item.name}</td>
-                            <td>{item.sku}</td>
-                        </tr>
+                            <tr key={item.id} onClick={() => {
+                                props.history.push({
+                                    pathname: '/details',
+                                    data: item
+                                })
+                            }}>
+                                <td>{item.id}</td>
+                                <td>{item.name}</td>
+                                <td>{item.sku}</td>
+                            </tr>
                     )
                     )}
                 </tbody>
