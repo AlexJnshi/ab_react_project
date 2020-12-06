@@ -51,5 +51,10 @@ Unfortunately, I did not success made that request, the api always back the same
 
 - For pagination, I use "cheaper way" to do it, sort data in client side,instead to request from server
 
+
 ### Detail page -detail index.js
 - Have logic to get all product categories' name, but looks have same issue with API ```/product?categories```. Did not figure it out.
+
+
+## Todo
+- Current using history to jump to detail page, but it has bugs, when user go to /detail page, will show nothing, but errors. It is better to use NavLink with dynamic to do this.
