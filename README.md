@@ -34,7 +34,7 @@ src/
 └── index.js
 ```
 
-## Logics and Problems
+## Logic and Problems
 This project only have two pages. All magics happened in landing page
 ### Landing page -products index.js
 - Add mobile responsive
