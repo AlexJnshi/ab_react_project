@@ -1,0 +1,14 @@
+.table {
+    display: flex;
+    margin: 10px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-icon {
+    display: flex;
+    margin: 80px;
+    justify-content: center;
+    transform: scale(3);
+}

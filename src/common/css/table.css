@@ -1,0 +1,21 @@
+.table-box {
+    font-family: 'Montserrat', sans-serif;
+}
+
+th, td {
+    padding: .65em;
+}
+
+th {
+    background: black;
+    border: 1px solid black;
+    color: #fff;
+}
+
+td {
+    border: 1px solid black;
+}
+
+tbody tr:nth-child(odd) {
+    background: #ddd;
+}

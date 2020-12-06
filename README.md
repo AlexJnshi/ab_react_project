@@ -1,9 +1,19 @@
-# Getting Started with Create React App
+# Front End Developer Task 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Online Demo
+Click [here]
 
+## Quick Start
+```
+    $ git clone
+    $ cd
+
+    $ npm i
+
+    $
+```
 In the project directory, you can run:
 
 ### `yarn start`

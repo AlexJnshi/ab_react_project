@@ -1,0 +1,15 @@
+.pagination {
+    display: flex;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.page-item {
+    margin: 15px 10px 10px;
+}
+
+.page-item a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
