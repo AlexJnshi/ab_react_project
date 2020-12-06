@@ -33,7 +33,7 @@ const Filters = (props) => {
             {isLoading ? (
                 <span></span>
             ) : (   //show first 5 categories using to filte
-                    categories.slice(0, 5).map(item => (
+                    categories.slice(0, 6).map(item => (
                         <span className="categories-order" onClick={() => {
                             //request from server for exact catefory products
                             reloadProduct(item.id)

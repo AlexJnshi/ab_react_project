@@ -19,6 +19,8 @@ const Products = (props) => {
     //change page
     function paginate(pageNumber) {
         setCurrentPage(pageNumber)
+        //Persistence pageNumber state
+        localStorage.setItem('pageNumber',pageNumber)
     }
 
     let { isLoading } = props.products;
@@ -27,7 +29,12 @@ const Products = (props) => {
     }
 
     useEffect(() => {
-        getProductsData()
+        //check pageNumber, if exist go that page
+        let pageN = localStorage.getItem('pageNumber')
+        if(pageN){
+            paginate(pageN)
+        }else{
+        getProductsData()}
     }, [])
 
     return (
