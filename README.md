@@ -35,7 +35,7 @@ src/
 ```
 
 ## Logic and Problems
-This project only have two pages. All magics happened in landing page
+This project only have two pages(no 404). All magics happened in landing page
 ### Landing page -products index.js
 - Add mobile responsive
 - Before page render, check fliter state and page numbers in Sessionlstorage, if they are exist go that page, if not featch new data wich Categories=0 "all" with 100 products data
