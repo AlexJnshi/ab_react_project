@@ -37,6 +37,8 @@ const Filters = (props) => {
                         <span className="categories-order" onClick={() => {
                             //request from server for exact catefory products
                             reloadProduct(item.id)
+                            //setPageNumber = 1
+                            sessionStorage.setItem("pageNumber",1)
                         }
                         } key={item.id}>{item.name}</span>
                     ))
