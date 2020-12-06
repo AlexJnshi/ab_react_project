@@ -12,8 +12,10 @@ const Pagination = (props) => {
 
     useEffect(() => {
         const pageN = localStorage.getItem("pageNumber")
-        setActiveIndex(pageN)
-    },[])
+        if (pageN) {
+            setActiveIndex(pageN)
+        }
+    }, [])
 
     return (
         <nav>
