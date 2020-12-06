@@ -20,7 +20,7 @@ const Products = (props) => {
     function paginate(pageNumber) {
         setCurrentPage(pageNumber)
         //Persistence pageNumber state
-        localStorage.setItem('pageNumber',pageNumber)
+        sessionStorage.setItem('pageNumber',pageNumber)
     }
 
     let { isLoading } = props.products;
@@ -30,7 +30,7 @@ const Products = (props) => {
 
     useEffect(() => {
         //check pageNumber, if exist go that page
-        let pageN = localStorage.getItem('pageNumber')
+        let pageN = sessionStorage.getItem('pageNumber')
         if(pageN){
             paginate(pageN)
         }
