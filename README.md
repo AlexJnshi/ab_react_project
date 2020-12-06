@@ -36,7 +36,7 @@ src/
 
 ## Logics and Problems
 This project only have two pages. All magics happened in landing page
-### Landing page -Products index.js
+### Landing page -products index.js
 - Add mobile responsive
 - Before page render, check fliter state and page numbers in Sessionlstorage, if they are exist go that page, if not featch new data wich Categories=0 "all" with 100 products data
 
@@ -50,3 +50,6 @@ Unfortunately, I did not success made that request, the api always back the same
     - As a result, The filter function not working and I could not to store filter state in Sessionlstorage.
 
 - For pagination, I use "cheaper way" to do it, sort data in client side,instead to request from server
+
+### Detail page -detail index.js
+- Have logic to get all product categories' name, but looks have same issue with API ```/product?categories```. Did not figure it out.
