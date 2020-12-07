@@ -37,12 +37,16 @@ src/
 ## Logic and Problems
 This project only have two pages(no 404). All magics happened in landing 
 
+### Update on 8th Dec 2020
+- API `/categories?id:in=` with array fixed
+- When go to check certain id with API `/categories?id=`, it will return 'too many data'. It still happen when add limit. As a result, in the front end, some filters may not work or keep showing loading animation.
+
+
 ### Update on 7th Dec 2020
 - API `/products?categories:in= ` works fine, bug fixed
 - API `/categories?id=` is OK working with integer, but not working with array[integer]. 
     - For example, `/categories?id:in=`
 - Updated request URL formates to avoid null params,as a result qs is no longer needed.
-- Looks do not have to store filter state to sessionStorage.
 
 
 ### Landing page -products index.js
@@ -62,7 +66,7 @@ Unfortunately, I did not success made that request, the api always back the same
 
 
 ### Detail page -detail index.js
-- Have logic to get all product categories' name, but looks have same issue with API `/product?categories`. Did not figure it out.
+- Have logic to get all product categories' name, but looks have a issue with API `/categories?id:in=`. Did not figure it out.
 
 
 ## Todo
