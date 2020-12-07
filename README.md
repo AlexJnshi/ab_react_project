@@ -42,6 +42,7 @@ This project only have two pages(no 404). All magics happened in landing
 - API `/categories?id=` is OK working with integer, but not working with array[integer]. 
     - For example, `/categories?id:in=`
 - Updated request URL formates to avoid null params,as a result qs is no longer needed.
+- Looks do not have to store filter state to sessionStorage.
 
 
 ### Landing page -products index.js
