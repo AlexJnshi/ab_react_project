@@ -15,13 +15,10 @@ const getProducts = (itemId) => {
             }
 
             let { page, limit, categories } = getState().products
-            let params = {
-                categories,
-                page,
-                limit
-            }
-            return await http.get(`/products`, { params })
+            
+            return await http.get(`/products?page=${page}&limit=${limit}${categories?("&categories:in="+categories):""}`)
                 .then(res => {
+                    console.log(res)
                     if (res.data.data.length > 0) {
                         dispatch({
                             type: "PRODUCTS_LOADOVER",

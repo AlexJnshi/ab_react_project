@@ -9,9 +9,9 @@ import "../../common/css/products.css"
 
 const Products = (props) => {
     const { data } = props.products;
+    //set pagination
     const [currentPage, setCurrentPage] = useState(1);
     const dataPerPage = 10;
-    //set pagination
     const indexOfLastData = currentPage * dataPerPage
     const indexOfFirstData = indexOfLastData - dataPerPage
     const currentData = data.slice(indexOfFirstData, indexOfLastData)

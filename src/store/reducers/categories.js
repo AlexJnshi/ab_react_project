@@ -1,7 +1,7 @@
 const categories = (state = {
     isLoading: false,
     categories: [],
-    limit: 2000,
+    limit: 0,
 }, action) => {
     // eslint-disable-next-line default-case
     switch (action.type) {

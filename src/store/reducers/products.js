@@ -4,7 +4,7 @@ const products = (state = {
     page: 1,
     limit: 100,
     id: [],
-    categories: 0
+    categories: null,
 }, action) => {
     // eslint-disable-next-line default-case
     switch (action.type) {

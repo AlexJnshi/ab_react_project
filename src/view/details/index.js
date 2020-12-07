@@ -7,13 +7,10 @@ const Details = (props) => {
     const { data } = props.location
     const { categories } = props.categories
     const { history } = props
-    console.log(props)
 
     useEffect(() => {
-        //had problems here...
-        //the api /products?categories:in=... looks not return the correct results..
-        //may be I was wrong
-        const findeCateNames = () => {
+
+        const findCateNames = () => {
             let names = []
             for (let item of data.categories) {
                 for (let cateName of categories) {
@@ -24,6 +21,7 @@ const Details = (props) => {
             }
             return names
         }
+        console.log(findCateNames())
         window.scrollTo(0, 0);
     })
 
