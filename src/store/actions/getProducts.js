@@ -13,9 +13,8 @@ const getProducts = (itemId) => {
                     categories: itemId
                 })
             }
-
+        
             let { page, limit, categories } = getState().products
-            
             return await http.get(`/products?page=${page}&limit=${limit}${categories?("&categories:in="+categories):""}`)
                 .then(res => {
                     console.log(res)

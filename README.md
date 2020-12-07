@@ -39,7 +39,11 @@ This project only have two pages(no 404). All magics happened in landing
 
 ### Update on 8th Dec 2020
 - API `/categories?id:in=` with array fixed
-- When go to check certain id with API `/categories?id=`, it will return 'too many data'. It still happen when add limit. As a result, in the front end, some filters may not work or keep showing loading animation.
+- When go to check certain categories with API `/product?categories=`, there is no data returned. As a result, click some filters may keep showing loading animation.
+    ```jsx
+        //e.g. 
+        "/product?categories=2874"
+    ```
 
 
 ### Update on 7th Dec 2020
