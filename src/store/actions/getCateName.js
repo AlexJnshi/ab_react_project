@@ -1,6 +1,6 @@
 import http from './http'
 
-const getCateNames = (cateArr) => {
+const getCateName = (cateArr) => {
     return async function (dispatch) {
         let idStr = cateArr.join(",")
         return (await http.get(`/categories?${idStr ? "id:in=" + idStr : ""}`)
@@ -16,4 +16,4 @@ const getCateNames = (cateArr) => {
     }
 } 
 
-export default getCateNames
+export default getCateName

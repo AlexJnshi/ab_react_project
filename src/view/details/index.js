@@ -11,7 +11,7 @@ const Details = (props) => {
     console.log(props)
     
     const getCateNamesData=()=>{
-        return props.dispatch(getCateNames(data.categories))
+        return props.dispatch(getCateName(data.categories))
     }
     useEffect(() => {
         getCateNamesData()
