@@ -1,29 +1,22 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import Wireframes from "../../common/components/Wireframes"
+import getCateNames from "../../store/actions/getCateNames"
 import '../../common/css/details.css'
 
 const Details = (props) => {
     const { data } = props.location
-    const { categories } = props.categories
+    const { detailCates } = props.categories
     const { history } = props
-
+    console.log(props)
+    
+    const getCateNamesData=()=>{
+        return props.dispatch(getCateNames(data.categories))
+    }
     useEffect(() => {
-
-        const findCateNames = () => {
-            let names = []
-            for (let item of data.categories) {
-                for (let cateName of categories) {
-                    if (item === cateName.id) {
-                        names.push(cateName.name)
-                    }
-                }
-            }
-            return names
-        }
-        console.log(findCateNames())
+        getCateNamesData()
         window.scrollTo(0, 0);
-    })
+    },[])
 
     const goBack = (history) => {
         return () => {
@@ -40,8 +33,8 @@ const Details = (props) => {
                 <div className="back-list" onClick={goBack(history)}>&lt; Back to list</div>
                 <h1>{data.name}</h1>
                 <h5>Categories:
-                {data.categories.map((item, index) => (
-                    <span key={index}> {item}, </span>
+                {detailCates.map((item, index) => (
+                    <span key={index}> {item.name}, </span>
                 ))}
                 </h5>
                 <h5>SKU:<span> {data.sku}</span></h5>

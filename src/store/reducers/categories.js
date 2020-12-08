@@ -1,6 +1,7 @@
 const categories = (state = {
     isLoading: false,
     categories: [],
+    detailCates: [],
     limit: 0,
 }, action) => {
     // eslint-disable-next-line default-case
@@ -15,6 +16,11 @@ const categories = (state = {
                 ...state,
                 isLoading: false,
                 categories: action.data
+            }
+        case "CATEGORES_DETAILCATES":
+            return {
+                ...state,
+                detailCates: action.data
             }
     }
     return state

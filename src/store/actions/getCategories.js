@@ -10,7 +10,6 @@ const getCategories = (cateArr) => {
             let idStr = cateArr.join(",")
             return (await http.get(`/categories?${idStr?"id:in="+idStr:""}${limit>0?("&limit="+limit):""}`)
                 .then(res => {
-                    console.log(res)
                     if (res.data.data.length > 0) {
                         dispatch({
                             type: "CATEGORIES_LOADINGOVER",

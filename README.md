@@ -44,6 +44,7 @@ This project only have two pages(no 404). All magics happened in landing
         //e.g. 
         "/product?categories=2874"
     ```
+- Update detail page categoires, can display correctly.
 
 
 ### Update on 7th Dec 2020

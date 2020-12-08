@@ -9,6 +9,7 @@ import "../../common/css/products.css"
 
 const Products = (props) => {
     const { data } = props.products;
+    let { isLoading } = props.products;
     //set pagination
     const [currentPage, setCurrentPage] = useState(1);
     const dataPerPage = 10;
@@ -22,8 +23,7 @@ const Products = (props) => {
         //Persistence pageNumber state
         sessionStorage.setItem('pageNumber',pageNumber)
     }
-
-    let { isLoading } = props.products;
+    
     function getProductsData() {
         return props.dispatch(getProducts())
     }
