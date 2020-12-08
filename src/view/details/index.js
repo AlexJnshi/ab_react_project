@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import Wireframes from "../../common/components/Wireframes"
-import getCateNames from "../../store/actions/getCateNames"
+import getCateName from "../../store/actions/getCateName"
 import '../../common/css/details.css'
 
 const Details = (props) => {
