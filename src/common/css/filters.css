@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     margin: 10px 0px;
-    white-space:nowrap;
+    white-space: nowrap;
 }
 
 .categories-order {
@@ -17,17 +17,16 @@
     cursor: pointer;
 }
 
-@media screen and (max-width : 600px){
-    .categories-order{
+@media screen and (max-width: 600px) {
+    .categories-order {
         font-size: 15px;
-        white-space:nowrap;
+        white-space: nowrap;
         margin: 5px 5px;
         padding: 5px 8px;
         text-align: center;
     }
-    .categories-block{
+    .categories-block {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        
     }
 }

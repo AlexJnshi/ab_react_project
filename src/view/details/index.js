@@ -8,15 +8,10 @@ const Details = (props) => {
     const { data } = props.location
     const { detailCates } = props.categories
     const { history } = props
-    console.log(props)
-    
-    const getCateNamesData=()=>{
+
+    const getCateNamesData = () => {
         return props.dispatch(getCateName(data.categories))
     }
-    useEffect(() => {
-        getCateNamesData()
-        window.scrollTo(0, 0);
-    },[])
 
     const goBack = (history) => {
         return () => {
@@ -27,6 +22,13 @@ const Details = (props) => {
             }
         }
     }
+
+    useEffect(() => {
+        getCateNamesData()
+        //Using history to jump,need to go to the top of page, should using NavLink next time.
+        window.scrollTo(0, 0);
+    }, [])
+
     return (
         <Wireframes>
             <div className="details">

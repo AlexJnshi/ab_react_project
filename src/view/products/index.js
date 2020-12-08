@@ -18,20 +18,20 @@ const Products = (props) => {
     const currentData = data.slice(indexOfFirstData, indexOfLastData)
 
     //change page
-    function paginate(pageNumber) {
+    let paginate = (pageNumber) => {
         setCurrentPage(pageNumber)
         //Persistence pageNumber state
-        sessionStorage.setItem('pageNumber',pageNumber)
+        sessionStorage.setItem('pageNumber', pageNumber)
     }
-    
-    function getProductsData() {
+
+    let getProductsData = () => {
         return props.dispatch(getProducts())
     }
 
     useEffect(() => {
         //check pageNumber, if exist go that page
         let pageN = sessionStorage.getItem('pageNumber')
-        if(pageN){
+        if (pageN) {
             paginate(pageN)
         }
         getProductsData()

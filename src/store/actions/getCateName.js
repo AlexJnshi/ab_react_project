@@ -1,5 +1,6 @@
 import http from './http'
 
+//this action is used to detail page to get categories' names
 const getCateName = (cateArr) => {
     return async function (dispatch) {
         let idStr = cateArr.join(",")
@@ -14,6 +15,6 @@ const getCateName = (cateArr) => {
             })
         )
     }
-} 
+}
 
 export default getCateName
