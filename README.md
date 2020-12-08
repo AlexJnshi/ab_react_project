@@ -39,10 +39,10 @@ This project only have two pages(no 404). All magics happened in landing
 
 ### Update on 8th Dec 2020
 - API `/categories?id:in=` with array fixed
-- When go to check certain categories with API `/product?categories=`, there is no data returned. As a result, click some filters may keep showing loading animation.
+- When go to check certain categories with API `/products?categories=`, there is no data returned. As a result, click some filters may keep showing loading animation.
     ```jsx
         //e.g. 
-        "/product?categories=2874"
+        "/products?categories=2874"
     ```
 - Update detail page categoires, can display correctly.
 
