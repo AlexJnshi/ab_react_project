@@ -40,9 +40,11 @@ This project only has two pages(no 404). All magics happened in landing page
 ### Update on 9th Dec 2020
 - `/products?categories=2874` is Members-only category, I think it will show depends on log-in state. For this task, this certain category should be removed from categories array.(Focus on details!;))
 - Find couple small issues may affect UX, listed blow:
-    - When click category filters the data is not showing from first if you are browsing data not in first page before you click filter, but pagination is moving to 1.
+    - When click category filters the data is not showing from first if you are browsing data not in first page before you click filter, but pagination is moving to 1. This may lead to a bug that if new data is not long enough the table and pagination will be shown without data
     ```
-        e.g. You current in page 2 for 'default category' data, then you click 'search by concern', the pagination move to 1, but data for 'search by concern' will show from page 2.
+        e.g. You current in page 2 for 'default category' data, 
+        then you click 'search by concern', the pagination move to 1, 
+        but data for 'search by concern' will show from page 2.
         it will be recovered by click pagination again
     ```
     - When moving to product detail page, the categories show slow or show previous product categories, then update info suddenly, may could solved by useMemo.
