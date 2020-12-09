@@ -34,8 +34,7 @@ src/
 └── index.js
 ```
 
-## Logic and Problems
-This project only has two pages(no 404). All magics happened in landing page
+## Updates
 
 ### Update on 9th Dec 2020
 - `/products?categories=2874` is Members-only category, I think it will show depends on log-in state. For this task, this certain category should be removed from categories array.(Focus on details!;))
@@ -67,6 +66,9 @@ This project only has two pages(no 404). All magics happened in landing page
 - Updated request URL formates to avoid null params, as a result, qs is no longer needed.
 
 
+## Logic and Problems
+This project only has two pages(no 404). All magics happened in landing page
+
 ### Landing page -products index.js
 - Add mobile responsive
 - UseEffect to check filter state and page numbers in Sessionlstorage, if they are exist go to that page, if not fetch 100 products data
@@ -85,7 +87,6 @@ Unfortunately, I did not success made that request, the api always back the same
 
 ### Detail page -detail index.js
 - Have logic to get all product categories' name, but looks have an issue with API `/categories?id:in=`. Did not figure it out.
-
 
 ## Todo
 - Current using history to jump to the detail page, but it has bugs, when user goes to /detail page dirctlly, will show nothing, but errors. It is better to use NavLink with dynamic params to do this.
