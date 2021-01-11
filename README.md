@@ -36,6 +36,23 @@ src/
 └── index.js
 ```
 
+## Logic and Problems
+
+This project only has two pages(no 404). All magics happened in landing page
+
+### Landing page -products index.js
+
+- Add mobile responsive
+- UseEffect to check filter state and page numbers in Sessionlstorage, if they are exist go to that page, if not fetch 100 products data
+- Use redux & redux-thunk to control loading state, when loading data, show loading animation.
+- When data has been fetched, it will automatically generate categories, only show 6 at top of the page.
+- When user clicks categories filters, it should make a request with clicked category, respond 100 results, then recalculate new 6 categories that are shown on the page.
+- For pagination, I use "cheaper way" to do it, sort data in client side, instead to request from the server
+
+### Detail page -detail index.js
+
+- Have logic to get all product categories' name, but looks have an issue with API `/categories?id:in=`. Did not figure it out.
+
 ## Updates
 
 ### Update on 9th Dec 2020
@@ -69,23 +86,8 @@ src/
   - For example, `/categories?id:in=`
 - Updated request URL formates to avoid null params, as a result, qs is no longer needed.
 
-## Logic and Problems
-
-This project only has two pages(no 404). All magics happened in landing page
-
-### Landing page -products index.js
-
-- Add mobile responsive
-- UseEffect to check filter state and page numbers in Sessionlstorage, if they are exist go to that page, if not fetch 100 products data
-- Use redux & redux-thunk to control loading state, when loading data, show loading animation.
-- When data has been fetched, it will automatically generate categories, only show 6 at top of the page.
-- When user clicks categories filters, it should make a request with clicked category, respond 100 results, then recalculate new 6 categories that are shown on the page.
-- For pagination, I use "cheaper way" to do it, sort data in client side, instead to request from the server
-
-### Detail page -detail index.js
-
-- Have logic to get all product categories' name, but looks have an issue with API `/categories?id:in=`. Did not figure it out.
-
 ## Todo
+
+- Automated Unit testing (Jest,enzyme)
 
 - Current using history to jump to the detail page, but it has bugs, when user goes to /detail page dirctlly, will show nothing, but errors. It is better to use NavLink with dynamic params to do this.
